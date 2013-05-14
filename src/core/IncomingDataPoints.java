@@ -250,7 +250,7 @@ final class IncomingDataPoints implements WritableDataPoints {
     //};
 
     // TODO(tsuna): Add an errback to handle some error cases here.
-    point.setDurable(!batch_import);
+    point.setDurable(true);
     return tsdb.client.put(point)/*.addBoth(cb)*/;
   }
 
